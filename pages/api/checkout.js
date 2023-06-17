@@ -10,7 +10,6 @@ import {
   city,
 } from "/Users/timarleyfoster/ecommerce/pages/checkout.js";
 
-
 export default async function handler(req, res) {
   await initMongoose();
 
@@ -18,7 +17,7 @@ export default async function handler(req, res) {
     res.send("should be a post but its not");
     return;
   }
-  const {email,name,address,city} =req.body
+  const { email, name, address, city } = req.body;
   const productsIds = req.body.products ? req.body.products.split(",") : [];
   const uniqIds = [...new Set(productsIds)];
 
