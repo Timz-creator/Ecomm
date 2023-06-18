@@ -52,5 +52,5 @@ export default async function handler(req, res) {
     metadata: { orderId: order._id.toString() },
   });
 
-  res.status(303).redirect(session.url);
+  return res.direct(303, session.url);
 }
