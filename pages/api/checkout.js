@@ -3,12 +3,6 @@ import Order from "@/models/Order";
 import Product from "@/models/Product";
 import { getNamedMiddlewareRegex } from "next/dist/shared/lib/router/utils/route-regex";
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
-import {
-  name,
-  email,
-  address,
-  city,
-} from "/Users/timarleyfoster/ecommerce/pages/checkout.js";
 
 export default async function handler(req, res) {
   await initMongoose();
