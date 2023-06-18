@@ -1,11 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-}
+};
 
 module.exports = {
   env: {
-    MONGODB_URL: 'mongodb+srv://timarleyf:0q3VwQ7SEG1ycChe@cluster0.y1hvkum.mongodb.net/ecommerce?retryWrites=true&w=majority',
-    
-  }
-}
+    MONGODB_URL: process.env.MONGODB_URL,
+    STRIPE_PUBLIC_KEY: process.env.STRIPE_PUBLIC_KEY,
+    STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY,
+  },
+};
