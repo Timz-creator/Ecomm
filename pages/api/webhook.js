@@ -5,7 +5,7 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 export default async function handler(req, res) {
   await initMongoose();
-  const signingSecret = "whsec_iJxxtr9mW0ECczeE39nXUehWu3gttcvV";
+  const signingSecret = "whsec_hO9BbWmTgfnBqfbAiYrZWvG02oUrHoyY";
   const payload = await buffer(req);
   const signature = req.headers["stripe-signature"];
   const event = stripe.webhooks.constructEvent(
@@ -18,7 +18,6 @@ export default async function handler(req, res) {
     const paymentStatus = event.data?.object?.payment_status;
     if (metadata?.orderId && paymentStatus === "paid") {
       await Order.findByIdAndUpdate(metadata.orderId, { paid: 1 });
-      console.log(event);
     }
   }
 }
