@@ -5,18 +5,13 @@ import { findAllProducts } from "./api/products";
 import Footer from "@/components/Footer";
 import { Layout } from "@/components/Layout";
 
-export default function Home({products}) {
+export default function Home({ products }) {
   const [productsInfo, setProductsInfo] = useState([]);
   const [phrase, setPhrase] = useState("");
-  
 
-  const categoriesNames = [...new Set(products.map((p) => p.category))];
-  
   if (phrase) {
-    products = products.filter((p) =>
-      p.name.toLowerCase().includes(phrase)
-    );
-  } 
+    products = products.filter((p) => p.name.toLowerCase().includes(phrase));
+  }
 
   return (
     <Layout>
@@ -27,27 +22,14 @@ export default function Home({products}) {
         placeholder="Search for products..."
         className="bg-gray-100 w-full py-2 px-4 rounded-xl"
       />
-      <div>
-        {categoriesNames.map((categoryName) => (
-          <div key={categoryName}>
-            {products.find((p) => p.category === categoryName) && (
-              <div>
-                <h2 className="text-2xl py-5">{categoryName}</h2>
-                <div className="flex -mx-5 overflow-x-scroll snap-x scrollbar-hide">
-                  {products
-                    .filter((p) => p.category === categoryName)
-                    .map((productsInfo) => (
-                      <div key={productsInfo._id} className="px-5 snap-start">
-                        <Product {...productsInfo} />
-                      </div>
-                    ))}
-                </div>
-              </div>
-            )}
+      <div className="flex flex-wrap justify-start -mx-2">
+        {products.map((productInfo) => (
+          <div key={productInfo._id} className="w-full md:w-1/2 lg:w-1/3 p-2">
+            <Product {...productInfo} />
           </div>
         ))}
       </div>
-      <Footer/>
+      <Footer />
     </Layout>
   );
 }
