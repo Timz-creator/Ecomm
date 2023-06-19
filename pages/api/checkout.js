@@ -16,7 +16,7 @@ export default async function handler(req, res) {
   const uniqIds = [...new Set(productsIds)];
 
   const products = await Product.find({ _id: { $in: uniqIds } }).exec();
-
+ 
   let line_items = [];
   for (let productId of uniqIds) {
     const quantity = productsIds.filter((id) => id === productId).length;
