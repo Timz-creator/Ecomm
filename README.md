@@ -1,47 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Ecommerce Website Landing Page
 
-## Getting Started
+![Project Banner](./Ecomm.png)
 
-First, run the development server:
+This is a personal project for an e-commerce website built with Next.js, Tailwind CSS, MongoDB, and integrated with the Stripe API. The project aims to provide a user-friendly and secure online shopping experience.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Table of Contents
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [Demo](#demo)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Demo
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+You can view a live demo of the website [here](https://ecomm-rho-rosy.vercel.app/).
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Responsive design fir optimal viewing on different devices
+- Product catalog showcasing various items avaliable for purchase
+- Shopping caet functionality to add and manage selected products
+- Secure payment processing using the Stripe API
+- Integration with MongoDB to store and retrieve product data
 
-## Learn More
+## Installation
 
-To learn more about Next.js, take a look at the following resources:
+To run this project locally, follow these steps:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone the repository:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```bash
+   git clone https://github.com/Timz-creator/Ecomm
+   ```
 
-## Deploy on Vercel
+## Usage
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To use this e-commerce site, start by browsing throug the website to explore the wide range of products of services offered. The intuitive search functionality allows you to easily find specific products based on your preferences. Once you've find your desire item/s, you can add them to your shopping cart.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# Ecommerce
-# Ecommerc_app
-# Ecommerc_app
-# Ecommerc_app
-# Ecommerce
-# Ecommerce
-# Ecomm
-# Ecomm
-# Ecomm
+You can then checkout securely and be assured your payment details are handled safely and securely through yhr integration with the Stripe API.
+
+Feel free to customize and adapt this e-commerce site to your specific needs or even extending the functionality.
