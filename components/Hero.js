@@ -9,7 +9,7 @@ const Hero = () => {
         <div className="flex flex-col w-full  ">
           <p className="text-9xl ml-12 pt-10 ">The Best Place For Your </p>
           <Typed
-            className="text-9xl ml-12 pt-10"
+            className="text-9xl ml-12"
             strings={["Gadgets", "Headphones", "Consoles", "Phones"]}
             typeSpeed={40}
             backSpeed={50}
