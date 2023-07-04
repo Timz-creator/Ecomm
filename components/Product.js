@@ -3,13 +3,15 @@ import { ProductsContext } from "./ProductsContext";
 
 const Product = ({ _id, name, price, description, picture }) => {
   const { setSelectedProducts } = useContext(ProductsContext);
+
   function addProduct() {
     setSelectedProducts((prev) => [...prev, _id]);
   }
+
   return (
     <div className="w-64">
-      <div className="bg-blue-100 p-5 rounded-xl">
-        <img src={picture} alt="" />
+      <div className="p-5 rounded-xl">
+        <img src={picture} alt="" className="w-full h-40 object-cover hover:h-full" />
       </div>
       <div className="mt-2">
         <h3 className="font-bold text-lg">{name}</h3>
