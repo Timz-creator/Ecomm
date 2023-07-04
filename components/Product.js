@@ -11,7 +11,7 @@ const Product = ({ _id, name, price, description, picture }) => {
   return (
     <div className="w-64">
       <div className="p-5 rounded-xl">
-        <img src={picture} alt="" className="w-full h-40 object-cover hover:h-full" />
+        <img src={picture} alt="" className="w-full h-40 object-cover" />
       </div>
       <div className="mt-2">
         <h3 className="font-bold text-lg">{name}</h3>
