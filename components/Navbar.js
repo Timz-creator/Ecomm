@@ -1,18 +1,46 @@
 import React from "react";
-import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
-import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
-import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
+
 const Navbar = () => {
   return (
-    <div className="flex items-center mt-4 pb-5 space-x-96 justify-around">
-      <h1 className="mr-12 font-bold font-mono text-2xl">Tech-Store</h1>
-      <ul className="flex space-x-8 font-mono">
-        <li className="hover:text-green-400">New arrivals</li>
-        <li className="hover:text-green-400">Explore</li>
-        <li className="hover:text-green-400">Support</li>
-        <li className="hover:text-green-400">Business</li>
-      </ul>
-    </div>
+    <nav className="container mx-auto px-4 py-6">
+      <div className="flex items-center justify-between">
+        <h1 className="text-2xl font-bold font-mono">Tech-Store</h1>
+        <ul className="flex space-x-8 font-mono">
+          <li>
+            <a
+              href="/new-arrivals"
+              className="hover:text-green-400 transition-colors duration-200"
+            >
+              New arrivals
+            </a>
+          </li>
+          <li>
+            <a
+              href="/explore"
+              className="hover:text-green-400 transition-colors duration-200"
+            >
+              Explore
+            </a>
+          </li>
+          <li>
+            <a
+              href="/support"
+              className="hover:text-green-400 transition-colors duration-200"
+            >
+              Support
+            </a>
+          </li>
+          <li>
+            <a
+              href="/business"
+              className="hover:text-green-400 transition-colors duration-200"
+            >
+              Business
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
   );
 };
 
